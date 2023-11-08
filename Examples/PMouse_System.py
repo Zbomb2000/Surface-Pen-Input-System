@@ -42,7 +42,34 @@ input_shift = 4
 
 cyclevar = False
 
-a_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ']
+a_list = [
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    'f',
+    'g',
+    'h',
+    'i',
+    'j',
+    'k',
+    'l',
+    'm',
+    'n',
+    'o',
+    'p',
+    'q',
+    'r',
+    's',
+    't',
+    'u',
+    'v',
+    'w',
+    'x',
+    'y',
+    'z',
+    ' ']
 current_index = 0
 
 while True:
@@ -75,7 +102,7 @@ while True:
             else:
                 current_index += 1
             print()
-            print("Current letter: '"+a_list[current_index]+"'")
+            print("Current letter: '" + a_list[current_index] + "'")
 
         if message == b'input3':
             keyboard.write(a_list[current_index])
@@ -119,7 +146,7 @@ while True:
 
     if input_shift == 4 and not cyclevar:
         if message == b'input1':
-            pyautogui.moveRel(0, 50, duration = 0.15)
+            pyautogui.moveRel(0, 50, duration=0.15)
             print()
             print("Mouse down")
 
@@ -129,13 +156,13 @@ while True:
             cyclevar = True
 
         if message == b'input3':
-            pyautogui.moveRel(50, 0, duration = 0.15)
+            pyautogui.moveRel(50, 0, duration=0.15)
             print()
             print("Mouse right")
 
     if input_shift == 5 and not cyclevar:
         if message == b'input1':
-            pyautogui.moveRel(0, -50, duration = 0.15)
+            pyautogui.moveRel(0, -50, duration=0.15)
             print()
             print("Mouse up")
 
@@ -145,7 +172,7 @@ while True:
             cyclevar = True
 
         if message == b'input3':
-            pyautogui.moveRel(-50, 0, duration = 0.15)
+            pyautogui.moveRel(-50, 0, duration=0.15)
             print()
             print("Mouse left")
 
